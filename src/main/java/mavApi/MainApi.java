@@ -10,8 +10,8 @@ public class MainApi {
 		System.out.println("1. Create Table in database                                    |");
 		System.out.println("2. Fetch API and Read                                          |");
 		System.out.println("3. Insert API to database table                                |");
-		System.out.println("4. Update Table                                                |");
-		System.out.println("5. Delete Table                                                |");
+		System.out.println("4. Update Table Record                                         |");
+		System.out.println("5. Delete Table Record                                         |");
 		System.out.println("6. Print Record by user input                                  |");
 		System.out.println("7. Exit System                                                 |");
 		System.out.println("_______________________________________________________________|");
@@ -51,6 +51,7 @@ public class MainApi {
 				break;
 
 			case 4:
+				UpdateAPIRecord.updateRecord();
 
 				menue();
 				break;
