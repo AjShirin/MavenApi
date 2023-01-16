@@ -40,52 +40,52 @@ public class APIFetch {
 		String jsonData = gson.toJson(jasonElementNew); // prettyJson
 		System.out.println(jsonData);
 
-		Attributes[] variable = gson.fromJson(jsonData, Attributes[].class);
-
-		for (Attributes api : variable) {
-
-			String webPages = api.getWeb_pages()[0];
-			String stateProvince = api.getState_province();
-			String alphaTwoCode = api.getAlpha_two_code();
-			String name = api.getName();
-			String country = api.getCountry();
-			String domains = api.getDomains()[0];
-
-			// Inserting data using SQL query
-			String sqlInsert = "insert into MavenApi(web_pages,state_province, alpha_two_code,name, country,domains)"
-					+ " values('" + webPages + "' ,'" + stateProvince + "', '" + alphaTwoCode + "','" + name + "' ,' "
-					+ country + "','" + domains + "')";
-
-			// Connection class object
-			Connection con = null;
-
-			// Try block to check for exceptions
-			try {
-
-				Driver driver = (Driver) Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver").newInstance();
-				DriverManager.registerDriver(driver);
-				con = DriverManager.getConnection(url, user, pass);
-				
-				// Creating a statement
-				Statement st = con.createStatement();
-
-				// Executing query
-				int s = st.executeUpdate(sqlInsert);
-				if (s >= 1)
-					System.out.println("inserted successfully : " + sqlInsert);
-				else
-					System.out.println("insertion failed");
-
-				// Closing the connections
-				con.close();
-			}
-
-			// Catch block to handle exceptions
-			catch (Exception ex) {
-				// Display message when exceptions occurs
-				System.err.println(ex);
-			}
-
-		}
+//		String webPages = api.getWeb_pages()[0];
+//			Attributes[] variable = gson.fromJson(jsonData, Attributes[].class);
+//
+//		for (Attributes api : variable) {
+//
+//			String stateProvince = api.getState_province();
+//			String alphaTwoCode = api.getAlpha_two_code();
+//			String name = api.getName();
+//			String country = api.getCountry();
+//			String domains = api.getDomains()[0];
+//
+//			// Inserting data using SQL query
+//			String sqlInsert = "insert into MavenApi(web_pages,state_province, alpha_two_code,name, country,domains)"
+//					+ " values('" + webPages + "' ,'" + stateProvince + "', '" + alphaTwoCode + "','" + name + "' ,' "
+//					+ country + "','" + domains + "')";
+//
+//			// Connection class object
+//			Connection con = null;
+//
+//			// Try block to check for exceptions
+//			try {
+//
+//				Driver driver = (Driver) Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver").newInstance();
+//				DriverManager.registerDriver(driver);
+//				con = DriverManager.getConnection(url, user, pass);
+//				
+//				// Creating a statement
+//				Statement st = con.createStatement();
+//
+//				// Executing query
+//				int s = st.executeUpdate(sqlInsert);
+//				if (s >= 1)
+//					System.out.println("inserted successfully : " + sqlInsert);
+//				else
+//					System.out.println("insertion failed");
+//
+//				// Closing the connections
+//				con.close();
+//			}
+//
+//			// Catch block to handle exceptions
+//			catch (Exception ex) {
+//				// Display message when exceptions occurs
+//				System.err.println(ex);
+//			}
+//
+//		}
 	}
 }
