@@ -50,13 +50,16 @@ public class MainApi {
 				menue();
 				break;
 
+			// Update Table Record By ID
 			case 4:
 				UpdateAPIRecord.updateRecord();
 
 				menue();
 				break;
 
+			// Delete Table Record By ID
 			case 5:
+				DeleteAPIRecord.deleteRecordById();
 
 				menue();
 				break;
