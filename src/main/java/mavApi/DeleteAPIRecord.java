@@ -12,7 +12,7 @@ import java.util.Scanner;
 
 public class DeleteAPIRecord {
 
-	static void deleteRecordById() throws IOException {
+	static void deleteRecordById() throws IOException, InterruptedException {
 		// Creating the connection using Oracle DB
 		// Note: url syntax is standard, so do grasp
 		String DB_URL = "jdbc:sqlserver://localhost:1433;databaseName=MavenApi;encrypt=true;trustServerCertificate=true";

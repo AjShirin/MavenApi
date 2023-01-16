@@ -50,12 +50,12 @@ public class UpdateAPIRecord {
 			ResultSet rs = pstmt2.executeQuery();
 			if (rs.next()) {
 				//Integer ID = rs.getInt(1);
-				String webPages = rs.getString("web_pages");
-				String stateProvince = rs.getString("state_province");
-				String alphaTwoCode = rs.getString("alpha_two_code");
-				String name = rs.getString("name");
-				String country = rs.getString("country");
-				String domains = rs.getString("domains");
+				String webPages = rs.getString(2);
+				String stateProvince = rs.getString(3);
+				String alphaTwoCode = rs.getString(4);
+				String name = rs.getString(5);
+				String country = rs.getString(6);
+				String domains = rs.getString(7);
 
 				System.out.println("Record Updated Successfully :) !!");
 

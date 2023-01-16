@@ -64,7 +64,9 @@ public class MainApi {
 				menue();
 				break;
 
+			// Print Record by user input    
 			case 6:
+				PrintAPIRecord.PrintRecordFromTable();
 
 				menue();
 				break;
