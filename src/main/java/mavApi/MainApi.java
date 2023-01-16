@@ -35,8 +35,10 @@ public class MainApi {
 
 				menue();
 				break;
-
+				
+			// Fetch API and Read 
 			case 2:
+				FetchAndRead.Fetch_ReadTable();
 
 				menue();
 				break;
