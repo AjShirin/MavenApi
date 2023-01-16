@@ -42,8 +42,10 @@ public class MainApi {
 
 				menue();
 				break;
-
+				
+			// Insert API to database table
 			case 3:
+				InsertApi.insertData();
 
 				menue();
 				break;
