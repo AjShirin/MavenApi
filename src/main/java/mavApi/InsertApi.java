@@ -17,15 +17,17 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonParser;
 
 public class InsertApi {
+
+	//TODO: You have to remove unused import
 	static void insertData() throws IOException, InterruptedException {
 		// Creating the connection using Oracle DB
 		// Note: url syntax is standard, so do grasp
-		String DB_URL = "jdbc:sqlserver://localhost:1433;databaseName=MavenApi;encrypt=true;trustServerCertificate=true";
+		String DB_URL = "jdbc:sqlserver://localhost:1433;databaseName=MavenApi;encrypt=true;trustServerCertificate=true";//TODO: Variable names
 
 		// Username and password to access DB
 		// Custom initialization
-		String USER = "sa";
-		String PASS = "root";
+		String USER = "sa";//TODO: Variable names
+		String PASS = "root"; //TODO: Variable names
 
 		HttpClient client = HttpClient.newHttpClient();
 		HttpRequest request = HttpRequest.newBuilder()

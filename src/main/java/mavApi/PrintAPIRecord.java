@@ -10,16 +10,16 @@ import java.util.Date;
 import java.util.Scanner;
 
 public class PrintAPIRecord {
-	public static void PrintRecordFromTable() throws IOException, InterruptedException {
+	public static void PrintRecordFromTable() throws IOException, InterruptedException { //TODO: Your function will never throw these errors.
 
 		// Creating the connection using Oracle DB
 		// Note: url syntax is standard, so do grasp
-		String DB_URL = "jdbc:sqlserver://localhost:1433;databaseName=MavenApi;encrypt=true;trustServerCertificate=true";
+		String DB_URL = "jdbc:sqlserver://localhost:1433;databaseName=MavenApi;encrypt=true;trustServerCertificate=true";//TODO: Variable names
 
 		// Username and password to access DB
 		// Custom initialization
-		String USER = "sa";
-		String PASS = "root";
+		String USER = "sa"; //TODO: Variable names
+		String PASS = "root";//TODO: Variable names
 
 		int count = 0;
 		String sql = "SELECT * FROM MavenApiT";

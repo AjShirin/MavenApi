@@ -11,12 +11,12 @@ public class CreateApiTable {
 	static void createTable() throws IOException, InterruptedException {
 		// Creating the connection using Oracle DB
 		// Note: url syntax is standard, so do grasp
-		String DB_URL = "jdbc:sqlserver://localhost:1433;databaseName=MavenApi;encrypt=true;trustServerCertificate=true";
+		String DB_URL = "jdbc:sqlserver://localhost:1433;databaseName=MavenApi;encrypt=true;trustServerCertificate=true"; //TODO: Variable name should be camelCase
 
 		// Username and password to access DB
 		// Custom initialization
-		String USER = "sa";
-		String PASS = "root";
+		String USER = "sa"; //TODO: Variable name should be camelCase
+		String PASS = "root"; //TODO: Variable name should be camelCase
 		try (Connection conn = DriverManager.getConnection(DB_URL, USER, PASS);
 				Statement stmt = conn.createStatement();) {
 			// Create Table in SQL

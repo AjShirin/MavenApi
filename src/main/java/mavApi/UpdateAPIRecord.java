@@ -9,7 +9,7 @@ import java.sql.ResultSet;
 import java.util.Scanner;
 
 public class UpdateAPIRecord {
-	static void updateRecord() throws IOException, InterruptedException {
+	static void updateRecord() throws IOException, InterruptedException { //TODO: AS per other class reviews
 		// Creating the connection using Oracle DB
 		// Note: url syntax is standard, so do grasp
 		String DB_URL = "jdbc:sqlserver://localhost:1433;databaseName=MavenApi;encrypt=true;trustServerCertificate=true";
@@ -33,6 +33,10 @@ public class UpdateAPIRecord {
 
 			con = DriverManager.getConnection(DB_URL, USER, PASS);
 			PreparedStatement pstmt = con.prepareStatement(updateSQL);
+
+			/*
+			Why are these not as per use input?
+			 */
 
 			pstmt.setString(1, "JackMars.com");
 			pstmt.setString(2, "True");

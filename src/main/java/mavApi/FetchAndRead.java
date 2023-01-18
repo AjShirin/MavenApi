@@ -16,19 +16,23 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonParser;
 
 public class FetchAndRead {
-	static void Fetch_ReadTable() throws IOException, InterruptedException {
+	static void Fetch_ReadTable() throws IOException, InterruptedException { //TODO: Function name is not good
 
 		// Creating the connection using Oracle DB
 		// Note: url syntax is standard, so do grasp
-		String DB_URL = "jdbc:sqlserver://localhost:1433;databaseName=MavenApi;encrypt=true;trustServerCertificate=true";
+		String DB_URL = "jdbc:sqlserver://localhost:1433;databaseName=MavenApi;encrypt=true;trustServerCertificate=true"; //TODO: Variable names
 
 		// Username and password to access DB
 		// Custom initialization
-		String USER = "sa";
-		String PASS = "root";
+		String USER = "sa"; //TODO: Variable names
+		String PASS = "root";//TODO: Variable names
 
 		try (Connection conn = DriverManager.getConnection(DB_URL, USER, PASS);
 				Statement stmt = conn.createStatement();) {
+			/*
+			There is no use for above lines because there is no use for database here
+			 */
+
 			HttpClient client = HttpClient.newHttpClient();
 			HttpRequest request = HttpRequest.newBuilder()
 					.uri(URI.create("http://universities.hipolabs.com/search?country=United+States")).build();
